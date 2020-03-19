@@ -79,6 +79,9 @@ public class PlayerActor : Actor
 
         if (collision.gameObject.CompareTag(Data.TAG_ENEMY))
             Destroing();
+
+        if (collision.gameObject.CompareTag(Data.TAG_BULLET_ENEMY))
+            Destroing();
     }
 
     /// <summary>
