@@ -30,7 +30,9 @@ public abstract class Bullet : MonoBehaviour
             _poolObject.ReturnToPool();
     }
 
-
+    /// <summary>
+    /// Разрушение снаряда 
+    /// </summary>
     protected virtual void Destroing()
     {
         _poolObject.ReturnToPool();

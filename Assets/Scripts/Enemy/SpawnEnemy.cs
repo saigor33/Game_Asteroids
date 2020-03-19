@@ -3,8 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Рандомное появление врагов на карте
+/// </summary>
 public class SpawnEnemy : Spawner
 {
+
     protected override void CreateObjectSpawn()
     {
         int countEnemy = UnityEngine.Random.Range(_minCountCreateInTime, _maxCountCreateInTime);

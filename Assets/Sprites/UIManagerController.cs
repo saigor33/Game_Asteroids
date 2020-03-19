@@ -21,6 +21,10 @@ public class UIManagerController : MonoBehaviour
     [SerializeField]
     private GameObject _panelPause;
     [SerializeField]
+    private GameObject _textManagmentShip;
+    [SerializeField]
+    private float _timeShowTextManagmentShip;
+    [SerializeField]
     private GameObject _panelGameOver;
     [SerializeField]
     private AudioSource _audioSourceDestroingAsteroidCompomemt;
@@ -42,7 +46,11 @@ public class UIManagerController : MonoBehaviour
             Debug.LogError($"{this}(_panelGameOver): не добавлен объект Panel");
         if (_audioSourceDestroingAsteroidCompomemt == null)
             Debug.LogError($"{this}(_audioSourceDestroingAsteroid): не добавлен объект AudioSource");
+        if (_textManagmentShip == null)
+            Debug.LogError($"{this}(_textManagmentShip): не добавлен объект TextMeshPro");
         AudioSourceDestroingAsteroid = _audioSourceDestroingAsteroidCompomemt;
+
+        StartCoroutine(HideTextMenegmentShipAfterTime(_timeShowTextManagmentShip));
     }
 
     private void Update()
@@ -52,6 +60,12 @@ public class UIManagerController : MonoBehaviour
 
         if (Input.GetButtonDown(Data.NAME_BUTTON_PAUSE))
             UseWindowPause();
+    }
+
+    private IEnumerator HideTextMenegmentShipAfterTime(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        _textManagmentShip.SetActive(false);
     }
 
     /// <summary>
@@ -85,21 +99,33 @@ public class UIManagerController : MonoBehaviour
         ShowPanelGameOver();
     }
 
+    /// <summary>
+    /// Отобразить панель UI "GameOver"
+    /// </summary>
     private void ShowPanelGameOver()
     {
         _panelGameOver.SetActive(true);
     }
 
+    /// <summary>
+    /// Обработка события нажатия на кнопку "Продолжить"
+    /// </summary>
     public void ButtonResume_onClick()
     {
         UseWindowPause();
     }
 
+    /// <summary>
+    /// Обработка события нажатия на кнопку "Переиграть"
+    /// </summary>
     public void ButtonRestart_onClick()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    /// <summary>
+    /// Обработка нажатия на кнопку "Выход"
+    /// </summary>
     public void ButtonExit_onClick()
     {
         Application.Quit();

@@ -16,9 +16,10 @@ public class PlayerBullet : Bullet
         }
     }
 
+
     protected override void Destroing()
     {
-        //анимация уничтожения снаряда
+        //добавить анимацию уничтожения снаряда
         base.Destroing();
     }
 

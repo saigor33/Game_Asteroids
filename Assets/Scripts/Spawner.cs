@@ -35,7 +35,9 @@ public abstract class Spawner : MonoBehaviour
         InvokeRepeating(nameof(CreateObjectSpawn), 0, _delaySpawn);
     }
 
-
+    /// <summary>
+    /// Инициализировать объекта спавна
+    /// </summary>
     protected abstract void CreateObjectSpawn();
 
 

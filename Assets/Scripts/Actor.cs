@@ -18,9 +18,17 @@ public abstract class Actor : MonoBehaviour
 
     protected Rigidbody2D _rb;
 
-
+    /// <summary>
+    /// Сценарий для разрушения объекта
+    /// </summary>
     protected abstract void Destroing();
+    /// <summary>
+    /// Сценарий для выстрела из оружия 
+    /// </summary>
     protected abstract void Shoot();
+    /// <summary>
+    /// Проверка отавшегося количества жизней актора
+    /// </summary>
     protected virtual void CheckHealtPoint()
     {
         if (_healthPoint <= 0)

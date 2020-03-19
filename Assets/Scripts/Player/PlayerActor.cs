@@ -115,7 +115,7 @@ public class PlayerActor : Actor
         if (_statusCanGetDamage)
         {
             HealtPoint--;
-            //анимация разрушения 
+            //добавить анимацию разрушения 
             transform.position = Vector3.zero;
             _audioSourceExplosion.Play();
             StartCoroutine(RiseAgain());
