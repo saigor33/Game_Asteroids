@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6658111420087386095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1368127029040695963}
+  - component: {fileID: 3137569446841080892}
+  m_Layer: 0
+  m_Name: PoolObjects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1368127029040695963
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6658111420087386095}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.0478187, y: 1.2664905, z: -243.21875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3137569446841080892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6658111420087386095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461738e7644a21040b746e9ac08950bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - namePrefab: 0
+    prefab: {fileID: -2310981491806626955, guid: fb865bd05605da64884b48ed3bc36dcd,
+      type: 3}
+    count: 10
+  - namePrefab: 1
+    prefab: {fileID: -2310981491806626955, guid: c0c8515e42b05514598112353669f65a,
+      type: 3}
+    count: 10
+  - namePrefab: 2
+    prefab: {fileID: -2310981491806626955, guid: bc0a24f498d3b0f49ae2cb902b976033,
+      type: 3}
+    count: 20
+  - namePrefab: 3
+    prefab: {fileID: 7240340246684506683, guid: 81397c7ec3876b44f8d3842a67f884a0,
+      type: 3}
+    count: 20
+  - namePrefab: 4
+    prefab: {fileID: 3886372321417794783, guid: 01253229b78ac5d46b908fae17923b89,
+      type: 3}
+    count: 5
+  - namePrefab: 5
+    prefab: {fileID: 7240340246684506683, guid: 5f86bbec67474fd40ab0fa9e546ffa92,
+      type: 3}
+    count: 10
